@@ -1,0 +1,51 @@
+﻿@model List<CustomerAndAddresses>
+@{
+
+}
+<h2 class="text-center mb-5">List of Customers</h2>
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Customers" asp-action="Create"> New Customer</a>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Home Address</th>
+            <th>Office Address</th>
+            <th>Website Address</th>
+            <th>Remark</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var customer in Model )
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td><img src=@Url.Content( "~/CustomerPhotos/@customer.Photo" ) width="100" height="100" /></td>
+                @* <td><img src="../CustomerPhotos/Data/photo1.jpg" width="100" height="100" /></td> *@
+                <td>@customer.Email</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Fax</td>
+                <td>@customer.HomeAddress</td>
+                <td>@customer.OfficeAddress</td>
+                <td>@customer.Internet</td>
+                <td>@customer.Remarks</td>
+                <td style="white-space:nowrap">
+                    <a class="btn btn-primary btn-sm" asp-controller="Customers" asp-action="Edit" asp-route-id="@customer.Id">Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Customers" asp-action="Delete" asp-route-id="@customer.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
