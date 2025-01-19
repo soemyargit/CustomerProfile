@@ -1,0 +1,8 @@
+Insert Into Customers(Name, Photo, Email, Phone,Fax,Internet,Remarks)
+Values('Nibban', 'photo1.jpg', 'nibban01@gmail.com', '11223344','11223344','https://www.nibban.com.my','Remarks1')
+Insert Into Customers(Name, Photo, Email, Phone,Fax,Internet,Remarks)
+Values('Royal Asia', 'photo2.jpeg', 'royalasia@gmail.com', '3345677','11223344','https://www.royalasia.com.mm','Remarks2')
+Insert Into Customers(Name, Photo, Email, Phone,Fax,Internet,Remarks)
+Values('Sky Line', 'photo3.jpg', 'skyline@gmail.com', '3900200','11223344','https://www.skyline.com.my','Remarks3')
+Insert Into Customers(Name, Photo, Email, Phone,Fax,Internet,Remarks)
+Values('Cherry Myay', 'photo4.jpg', 'cherrymyay@gmail.com', '2345678','11223344','https://www.cherrymyay.com.mm','Remarks4')
